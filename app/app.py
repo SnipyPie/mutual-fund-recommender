@@ -11,6 +11,8 @@ st.title("Mutual Fund Recommendation System")
 st.markdown("### Get personalized mutual fund recommendations based on your risk profile and investment duration")
 st.info("This system uses financial metrics + machine learning to recommend and predict fund performance.")
 
+API_URL = "http://127.0.0.1:8000"
+
 # User Inputs
 risk = st.selectbox("Select Risk Level", ["Low", "Medium", "High"])
 duration = st.selectbox("Investment Duration", ["Short", "Medium", "Long"])
@@ -21,7 +23,7 @@ if "result" not in st.session_state:
 # Recommend button
 if st.button("Recommend"):
     response = requests.get(
-        "http://127.0.0.1:8000/recommend",
+        f"{API_URL}/recommend",
         params={"risk": risk, "duration": duration}
     )
     st.session_state.result = pd.DataFrame(response.json())
@@ -58,7 +60,7 @@ if st.session_state.result is not None:
         # Predict button
         if st.button("Predict Returns"):
             response = requests.get(
-                "http://127.0.0.1:8000/predict",
+                f"{API_URL}/predict",
                 params={"fund_name": selected_fund}
             )
 
