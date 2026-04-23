@@ -6,8 +6,8 @@ An end-to-end machine learning system that recommends the best mutual funds base
 
 ## 🌐 Live Demo
 
-🔗 https://your-app.streamlit.app  
-🔗 Backend API: https://your-api.onrender.com
+frontend:- https://mutual-fund-recommender-system.streamlit.app/
+backend:- https://mutual-fund-recommender-yn2f.onrender.com/
 
 ---
 
@@ -175,11 +175,3 @@ streamlit run app/app.py
 ![Prediction](screenshots/img3.png)
 ```
 
----
-
-## 🌐 Live Demo
-
-frontend:- https://mutual-fund-recommender-system.streamlit.app/
-backend:- https://mutual-fund-recommender-yn2f.onrender.com/
-
----
