@@ -1,64 +1,132 @@
-# 🚀 Mutual Fund Recommendation & Prediction System
+# 🚀 Intelligent Mutual Fund Recommendation & Prediction System
 
-An intelligent system that recommends optimal mutual funds based on user profile and predicts future returns using Machine Learning.
-
----
-
-## 🧠 Problem Statement
-
-Investors often struggle to select the right mutual funds due to complex financial metrics and lack of personalized insights.
-
-This system solves that by:
-
-* Recommending funds based on risk appetite and investment duration
-* Predicting future returns using ML models
+An end-to-end machine learning system that recommends the best mutual funds based on user preferences and predicts future returns using advanced ML models.
 
 ---
 
-## 🔄 System Flow
+## 🌐 Live Demo
 
-```
-User Input (Risk, Duration)
-        ↓
-Recommendation Engine (Scoring System)
-        ↓
-Top 5 Mutual Funds
-        ↓
-User Selection
-        ↓
-ML Prediction Model (Gradient Boosting)
-        ↓
-Predicted Returns (1Y, 3Y, 5Y)
-```
+🔗 https://your-app.streamlit.app  
+🔗 Backend API: https://your-api.onrender.com
+
+---
+
+## 💡 Problem Statement
+
+Choosing the right mutual fund is complex due to multiple financial factors like risk, returns, and fund performance.
+
+This system simplifies decision-making by:
+- Recommending top funds based on user profile
+- Predicting future returns using ML
 
 ---
 
 ## ⚙️ Features
 
-* 🔍 Data preprocessing and cleaning pipeline
-* 📊 Feature engineering using financial metrics (Sharpe ratio, risk, returns, expense ratio)
-* 🧮 Scoring engine to rank mutual funds
-* 🎯 Personalized recommendations based on:
-
-  * Risk level (Low, Medium, High)
-  * Investment duration (Short, Medium, Long)
-* 🤖 Machine Learning model for return prediction (Gradient Boosting)
-* 🌐 Interactive Streamlit web application
+- 🎯 Personalized recommendations (risk + duration)
+- 📊 Financial scoring system (Sharpe, risk, returns)
+- 🤖 ML-based return prediction (1Y, 3Y, 5Y)
+- 🔌 FastAPI backend for scalable architecture
+- 🌐 Fully deployed frontend + backend system
+- ⚡ Real-time interaction with API
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ System Architecture
+
 
 ```
-Frontend (Streamlit)
-        ↓
-FastAPI Backend
-        ↓
-Recommendation Engine + ML Model
-        ↓
-Data Layer (CSV → Future DB)
+User Input (Risk, Duration)
+↓
+Streamlit Frontend (Cloud)
+↓
+FastAPI Backend (Render)
+↓
+Recommendation Engine (Scoring)
+↓
+Top 5 Mutual Funds
+↓
+User Selection
+↓
+ML Model (Gradient Boosting)
+↓
+Predicted Returns (1Y, 3Y, 5Y)
 ```
 
+---
+
+## 🧠 Machine Learning Approach
+
+- Performed EDA (correlation, distribution, feature relationships)
+- Compared models:
+  - Linear Regression (baseline)
+  - Random Forest
+  - Gradient Boosting (final model)
+- Selected Gradient Boosting based on:
+  - Higher R² score
+  - Lower MAE
+  - Better handling of non-linearity
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- Streamlit
+
+**Backend:**
+- FastAPI
+
+**Machine Learning:**
+- Scikit-learn
+- Pandas, NumPy
+
+**Deployment:**
+- Render (Backend)
+- Streamlit Cloud (Frontend)
+
+---
+
+## 📸 Application Preview
+
+![App Screenshot](screenshot.png)
+
+---
+
+## 📂 Project Structure
+mutual-fund-recommender/
+│
+├── app/ # Streamlit frontend
+├── api/ # FastAPI backend
+├── src/ # ML + recommendation logic
+├── data/ # datasets
+├── requirements.txt
+├── README.md
+
+---
+
+## 🚀 Future Improvements
+
+- 🤖 AI-based explanation using LLMs
+- 🗄️ Database integration (PostgreSQL)
+- 📡 Real-time financial data pipeline
+- 📊 Advanced analytics dashboard
+
+---
+
+## 🧠 Key Learnings
+
+- Built a complete ML pipeline from scratch
+- Designed scalable backend using FastAPI
+- Integrated ML models into production system
+- Handled real-world issues like API latency and state management
+
+---
+
+## 👨‍💻 Author
+
+Shrijan  
+GitHub: https://github.com/SnipyPie
 ---
 
 ## ⚙️ Tech Stack
@@ -95,29 +163,23 @@ streamlit run app/app.py
 
 ## 📸 Application Preview
 
-(Add your screenshot here)
+
 
 ```
-![App Screenshot](screenshot.png)
+![App Screenshot]
+### 🔹 Recommendation System
+![Recommendation](screenshots/img1.png)
+### 🔹 Fund Selection
+![Selection](screenshots/img2.png)
+### 🔹 ML Prediction Output
+![Prediction](screenshots/img3.png)
 ```
 
 ---
 
 ## 🌐 Live Demo
 
-(Will be added after deployment)
+frontend:- https://mutual-fund-recommender-system.streamlit.app/
+backend:- https://mutual-fund-recommender-yn2f.onrender.com/
 
 ---
-
-## 🚀 Future Improvements
-
-* Integration with real-time financial APIs
-* Database integration (PostgreSQL)
-* LLM-based explanations (“Why this fund?”)
-* Full production deployment
-
----
-
-## 👨‍💻 Author
-
-**SnipyPie**
