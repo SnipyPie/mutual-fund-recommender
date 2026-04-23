@@ -1,8 +1,6 @@
-\# 🚀 Mutual Fund Recommendation System
+# 🚀 Mutual Fund Recommendation & Prediction System
 
-
-
-A personalized mutual fund recommendation system that suggests optimal investment options based on user risk appetite and investment duration.
+An intelligent system that recommends top mutual funds based on user profile and predicts future returns using Machine Learning.
 
 
 
